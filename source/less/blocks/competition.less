@@ -1,0 +1,60 @@
+.competition {
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-position: center;
+  display: flex;
+  min-height: 168px;
+  background-position-y: -68px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/bg-back-mobile@2x.jpg") no-repeat;
+    background-size: 700px auto;
+    background-position: center;
+    background-position-y: -70px;
+  }
+}
+
+.competition__text {
+  font-size: 24px;
+  font-weight: lighter;
+  color: @white;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  .mobile;
+  padding-top: 28px;
+  line-height: 28px;
+}
+
+@media (min-width: @tablet-width) {
+  .competition__text {
+    font-size: 50px;
+    .tablet;
+    line-height: 59px;
+    padding-top: 68px;
+  }
+
+  .competition {
+    min-height: 330px;
+    background: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+      background-position: center;
+      background-position-y: -78px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .competition__text {
+    width: 755px;
+    margin: 0 auto;
+    padding-top: 64px;
+  }
+
+  .competition {
+    background: none;
+    min-height: 285px;
+  }
+}

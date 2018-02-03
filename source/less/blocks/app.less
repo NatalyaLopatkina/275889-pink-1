@@ -1,0 +1,68 @@
+.app__background {
+  min-height: 395px;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat center;
+  position: relative;
+  background-position-y: -65px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 700px auto;
+  }
+}
+
+.app__image {
+  position: absolute;
+  bottom: 0;
+}
+
+.app__wrapper-background {
+  width: 300px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .app {
+    background: url("../img/bg-back-tablet@1x.jpg");
+    position: relative;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+      background-position: center;
+      background-position-y: 0;
+    }
+  }
+
+  .app__background {
+    background: none;
+  }
+
+  .app__wrapper {
+    display: flex;
+    justify-content: space-between;
+    .tablet;
+  }
+
+  .app__image {
+    position: absolute;
+    right: -6px;
+    bottom: 1px;
+    left: auto;
+    margin-right: -35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app__wrapper {
+    .desktop;
+  }
+
+  .app__image {
+    margin-right: -121px;
+  }
+
+  .app {
+    background: none;
+  }
+}

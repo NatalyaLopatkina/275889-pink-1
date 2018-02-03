@@ -1,0 +1,157 @@
+.achievements {
+  background-color: @grey;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 38px;
+}
+
+.achievements__text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: @pink;
+  text-transform: uppercase;
+  text-align: center;
+  width: 243px;
+  margin: 0 auto;
+  letter-spacing: 0.3px;
+}
+
+.achievements__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 39px;
+}
+
+.achievements__item {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @blue;
+  margin-bottom: 43px;
+  letter-spacing: 0.3px;
+}
+
+.achievements__wrapper {
+  .mobile;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: @white;
+  border: 2px solid @light-grey;
+  margin-right: 31px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background: @white;
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+}
+
+@media (min-width: @tablet-width) {
+  .achievements {
+    order: 3;
+    background: none;
+    margin-bottom: 20px;
+    padding-top: 16px;
+  }
+
+  .achievements__text {
+    margin: 0 auto;
+    width: 453px;
+    background: white;
+    text-align: center;
+    margin-top: -11px;
+  }
+
+  .achievements__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 46px;
+    margin-left: 59px;
+    padding-bottom: 4px;
+    letter-spacing: 0.35px;
+  }
+
+  .achievements__wrapper {
+    .tablet;
+    .border;
+    padding: 0;
+  }
+
+  input[type="checkbox"] + label::before {
+    margin-right: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .achievements {
+    background: @white;
+    margin-top: 30px;
+  }
+
+  .achievements__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 45px;
+    width: 837px;
+  }
+
+  .achievements__item {
+    width: 272px;
+    margin-right: -44px;
+  }
+
+  .achievements__wrapper {
+    .desktop;
+    padding: 0;
+    width: 936px;
+    padding-bottom: 8px;
+  }
+
+  .achievements__item--selfie {
+    order: 0;
+  }
+
+  .achievements__item--beach {
+    order: 3;
+  }
+
+  .achievements__item--norris {
+    order: 1;
+    margin-right: -62px;
+  }
+
+  .achievements__item--souvenirs {
+    order: 4;
+    margin-right: -62px;
+  }
+
+  .achievements__item--tower {
+    order: 2;
+  }
+
+  .achievements__item--hotel {
+    order: 5;
+  }
+
+  .achievements__wrapper-item {
+    width: 820px;
+    margin: 0 auto;
+  }
+}

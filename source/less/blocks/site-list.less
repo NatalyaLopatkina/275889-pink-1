@@ -1,0 +1,77 @@
+.site-list {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+.site-list__item {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 63px;
+  color: @white;
+  margin: 0 auto;
+  border-bottom: 1px solid @black;
+  border-top: 1px solid @dark-grey;
+  width: 100%;
+  min-height: 59px;
+}
+
+.site-list__link {
+  .mobile;
+  padding-right: 24px;
+}
+
+.site-list__link:hover {
+  color: @pink;
+}
+
+.site-list__link:active {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__link {
+    .tablet;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    text-transform: none;
+    font-weight: normal;
+    border: none;
+    width: 131px;
+    margin: 0;
+    letter-spacing: 0.3px;
+  }
+
+  .site-list__link:hover {
+    color: @pink;
+  }
+
+  .site-list__link:active {
+    color: @white;
+    opacity: 0.3;
+  }
+
+  .site-list__link--photo,
+  .site-list__link--competition,
+  .site-list__link--index {
+    padding: 0;
+    border-bottom: 2px solid @white;
+  }
+
+  .site-list__link {
+    padding: 0;
+    margin-right: 7px;
+  }
+
+  .site-list__link--academy {
+    margin-right: 0;
+  }
+
+  .site-list__link--index {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,57 @@
+.app-effect {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .app-effect {
+    background: @white;
+    display: block;
+    padding-top: 50px;
+  }
+
+  .app-effect__wrapper {
+    display: flex;
+    justify-content: space-between;
+    .tablet;
+    position: relative;
+  }
+
+  .app-effect__img {
+    position: relative;
+  }
+
+  .app-effect__time {
+    position: absolute;
+    font-size: 96px;
+    font-weight: bold;
+    color: @pink;
+    left: 85px;
+    top: 11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app-effect {
+    background: @grey;
+    padding-top: 0;
+    padding-bottom: 71px;
+  }
+
+  .app-effect__wrapper {
+    justify-content: flex-start;
+    .desktop;
+  }
+
+  .app-effect__img {
+    top: 44px;
+    width: 388px;
+    left: -44px;
+    height: 344px;
+  }
+
+  .app-effect__time {
+    font-size: 121px;
+    top: 44px;
+    left: 91px;
+  }
+}

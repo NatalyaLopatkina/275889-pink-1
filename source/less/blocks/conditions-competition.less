@@ -1,0 +1,68 @@
+.conditions-competition {
+  background-color: @white;
+  margin-top: 45px;
+}
+
+.conditions-competition__text {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @blue;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.conditions-competition__text-form {
+  display: none;
+}
+
+.conditions-competition__wrapper {
+  .mobile;
+  width: 275px;
+}
+
+@media (min-width: @tablet-width) {
+  .conditions-competition__text {
+    font-size: 18px;
+    width: 518px;
+    margin: 0 auto;
+    margin-top: 90px;
+  }
+
+  .conditions-competition__text-form {
+    display: inline;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+    color: @blue;
+    width: 518px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .conditions-competition__wrapper {
+    .tablet;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .conditions-competition__text {
+    width: 765px;
+    margin: 0 auto;
+  }
+
+  .conditions-competition {
+    margin-top: 92px;
+    margin-bottom: 62px;
+  }
+
+  .conditions-competition__wrapper {
+    .desktop;
+  }
+
+  .conditions-competition__text-br {
+    display: none;
+  }
+}
