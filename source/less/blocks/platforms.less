@@ -1,0 +1,132 @@
+.platforms {
+  background-color: @dark-blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.platforms__wrapper {
+  .mobile;
+}
+
+.platforms__list {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  padding-left: 17px;
+  padding-right: 21px;
+  margin: 0;
+}
+
+.platforms__download {
+  margin: 0 auto;
+  display: block;
+  padding: 15px 35px;
+  border: 3px solid @white;
+  border-radius: 50px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-top: 27px;
+  margin-bottom: 31px;
+}
+
+.platforms__download:hover {
+  background: @white;
+  color: @pink;
+}
+
+.platforms__download:active {
+  opacity: 0.3;
+}
+
+.platforms__description {
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 24px;
+  color: @white;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 31px;
+}
+
+.platforms__text {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .platforms__text {
+    display: inline-block;
+    font-family: @family;
+    font-size: 40px;
+    color: @white;
+    padding-left: 55px;
+    width: 191px;
+    text-align: center;
+    padding-top: 54px;
+  }
+
+  .platforms {
+    background-color: transparent;
+    width: 340px;
+    order: -1;
+    z-index: 100;
+  }
+
+  .platforms__list {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 45px;
+    padding-left: 13px;
+    padding-right: 15px;
+  }
+
+  .platforms__description {
+    font-size: 18px;
+    padding: 0;
+    margin-top: 37px;
+    margin-bottom: 110px;
+  }
+
+  .platforms__download {
+    margin-left: 0;
+    margin-top: -6px;
+    text-align: center;
+  }
+
+  .platforms__wrapper {
+    padding: 0;
+    margin: 0;
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .platforms__text {
+    font-size: 50px;
+    padding-left: 30px;
+    padding-top: 63px;
+    width: 238px;
+  }
+
+  .platforms__download {
+    margin-top: 9px;
+    font-size: 21px;
+    padding: 15px 22px;
+  }
+
+  .platforms__list {
+    padding: 0;
+    padding-top: 20px;
+    width: 285px;
+    margin-left: 6px;
+  }
+
+  .platforms__description {
+    margin-top: 55px;
+    margin-bottom: 122px;
+  }
+}

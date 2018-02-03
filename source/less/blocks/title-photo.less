@@ -1,0 +1,51 @@
+.title-photo {
+  background-color: @white;
+}
+
+.title-photo__text {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @blue;
+  text-align: center;
+  width: 255px;
+  margin: 0 auto;
+  letter-spacing: 0.4px;
+}
+
+.title-photo__wrapper {
+  .mobile;
+  margin-top: 46px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .title-photo__text {
+    font-size: 18px;
+    width: 445px;
+  }
+
+  .title-photo {
+    padding-top: 92px;
+    padding-bottom: 106px;
+  }
+
+  .title-photo__wrapper {
+    .tablet;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title-photo__text {
+    width: 575px;
+    margin: 0 auto;
+  }
+
+  .title-photo__wrapper {
+    .desktop;
+  }
+
+  .title-photo {
+    padding-bottom: 189px;
+  }
+}

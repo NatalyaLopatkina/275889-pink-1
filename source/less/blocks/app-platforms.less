@@ -1,0 +1,137 @@
+.app-platforms {
+  background-color: @grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 24px;
+}
+
+.app-platforms__text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: @pink;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.app-platforms__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 37px;
+}
+
+.app-platforms__item {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @blue;
+  margin-bottom: 36px;
+  letter-spacing: 0.3px;
+}
+
+.app-platforms__wrapper {
+  .mobile;
+  padding-bottom: 4px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  position: relative;
+}
+
+input[type="radio"]:checked + label::before,
+input[type="radio"]:not(:checked) + label::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: @white;
+  border: 2px solid @light-grey;
+  margin-right: 31px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 6px;
+  left: 13px;
+  background: @pink;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+@media (min-width: @tablet-width) {
+  .app-platforms {
+    order: 1;
+    background: none;
+    margin-bottom: 65px;
+    padding-top: 18px;
+  }
+
+  .app-platforms__text {
+    margin: 0 auto;
+    width: 365px;
+    display: block;
+    background: @white;
+    margin-top: -11px;
+  }
+
+  .app-platforms__item {
+    margin-left: 60px;
+    letter-spacing: 0.3px;
+  }
+
+  .app-platforms__wrapper {
+    .tablet;
+    .border;
+    padding: 0;
+  }
+
+  .app-platforms__list {
+    margin-top: 46px;
+    margin-bottom: 52px;
+  }
+
+  input[type="radio"]:checked + label::before,
+  input[type="radio"]:not(:checked) + label::before {
+    margin-right: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app-platforms__list {
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+
+  .app-platforms__item {
+    margin-bottom: 35px;
+    margin-left: 74px;
+  }
+
+  .app-platforms__wrapper {
+    width: 432px;
+    padding: 0;
+    padding-bottom: 21px;
+  }
+
+  .app-platforms {
+    padding-top: 14px;
+  }
+
+  .app-platforms__text {
+    margin-top: -8px;
+    letter-spacing: 0.3px;
+  }
+}

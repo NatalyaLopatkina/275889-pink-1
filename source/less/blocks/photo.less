@@ -1,0 +1,66 @@
+.photo {
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-position: center;
+  display: flex;
+  min-height: 168px;
+  background-position-y: -68px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 700px auto;
+  }
+}
+
+.photo__text {
+  font-size: 24px;
+  font-weight: lighter;
+  color: @white;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.photo__wrapper {
+  .mobile;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__text {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 29px;
+  }
+
+  .photo__wrapper {
+    .tablet;
+    margin-top: 41px;
+  }
+
+  .photo {
+    min-height: 328px;
+    background: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+      background-position: center;
+      background-position-y: -111px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__text {
+    width: 358px;
+    margin: 0 auto;
+  }
+
+  .photo__wrapper {
+    .desktop;
+    margin-top: 67px;
+  }
+
+  .photo {
+    background: none;
+    min-height: 285px;
+  }
+}

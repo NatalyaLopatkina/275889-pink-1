@@ -1,0 +1,93 @@
+.emotions {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @pink;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-top: 33px;
+  margin-bottom: 48px;
+}
+
+.emotions__placeholder {
+  font-family: @family;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @blue;
+  padding-left: 18px;
+  text-align: left;
+  width: 256px;
+  border: @grey-border;
+  margin-top: 9px;
+  padding-top: 16px;
+  padding-bottom: 35px;
+  letter-spacing: 0.4px;
+}
+
+.emotions__text {
+  text-align: center;
+  margin-bottom: 18px;
+  padding-left: 49px;
+  letter-spacing: 0.2px;
+}
+
+.emotions__wrapper {
+  .mobile;
+}
+
+@media (min-width: @tablet-width) {
+  .emotions {
+    order: 4;
+    margin-top: 45px;
+    margin-bottom: 49px;
+  }
+
+  .emotions__text {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    text-align: center;
+    background: white;
+    margin-top: -16px;
+    padding: 0;
+  }
+
+  .emotions__placeholder {
+    width: 474px;
+    border: 2px solid @grey;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 61px;
+    padding-bottom: 25px;
+  }
+
+  .emotions__wrapper {
+    .tablet;
+    .border;
+    padding: 0;
+    padding-bottom: 11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .emotions {
+    background: @white;
+  }
+
+  .emotions__placeholder {
+    width: 796px;
+    margin-top: 27px;
+    padding-left: 19px;
+    margin-left: 57px;
+    height: 84px;
+  }
+
+  .emotions__wrapper {
+    .desktop;
+    padding: 0;
+    width: 936px;
+  }
+}
