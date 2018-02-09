@@ -19,7 +19,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("css"))
     .pipe(server.stream())
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
@@ -34,12 +34,12 @@ gulp.task("style-dev", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("source/css"));
 });
 
 
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png, jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
