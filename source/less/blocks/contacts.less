@@ -18,6 +18,15 @@
 }
 
 .contacts__text {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  color: @pink;
+  margin-top: 2px;
+  line-height: 28px;
+}
+
+.contacts__link {
   font-size: 24px;
   font-weight: normal;
   color: @pink;
@@ -27,6 +36,7 @@
 
 .contacts__item {
   text-align: center;
+  margin-bottom: 22px;
 }
 
 .contacts__item--email {
@@ -40,13 +50,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    .tablet;
-    width: 639px;
-    padding-left: 11px;
+    width: 643px;
+    padding-right: 0;
   }
 
   .contacts__item {
-    width: 283px;
+    width: 275px;
+    padding-left: 0;
   }
 
   .contacts__text {
@@ -55,6 +65,10 @@
 
   .contacts {
     margin-bottom: 7px;
+  }
+
+  .contacts__item--email {
+    margin-bottom: 48px;
   }
 }
 

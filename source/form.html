@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/picturefill.min.js"></script>
+  <script src="js/script.button.js"></script>
 </head>
 <body>
 <header class="page-header">
@@ -41,13 +42,13 @@
       </nav>
     </div>
   </div>
+</header>
+<main class="page-main">
   <div  class="competition">
     <p class="competition__text">
       Конкурс на самое безбашенное путешествие с Пинк
     </p>
   </div>
-</header>
-<main class="page-main">
   <h1 class="visually-hidden">Конкурс Пинк</h1>
   <div class="conditions-competition">
     <div class="conditions-competition__wrapper">
@@ -165,7 +166,7 @@
           <p class="form__button">
             <button type="submit" class="form__button-text">Отправить форму
             </button></p>
-          <p class="form__text"><span class="form__text-asterisk">&#9913; </span>&mdash; Обязательные <span class="form__text-fill">для заполнения</span> поля</p>
+          <p class="form__text"><span class="form__text-asterisk">* </span>&mdash; Обязательные <span class="form__text-fill">для заполнения</span> поля</p>
         </div>
       </div>
     </form>
@@ -174,7 +175,10 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__link" href="index.html">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
       <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип Пинк">
+      </picture>
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">
@@ -217,28 +221,5 @@
     </div>
   </div>
 </section>
-<script>
-  var navMain = document.querySelector(".main-nav");
-  var navButton = document.querySelector(".page-header__button");
-  var navWrapper = document.querySelector(".page-header__wrapper");
-
-  navMain.classList.remove("main-nav--nojs");
-  navWrapper.classList.remove("page-header--nojs");
-
-  navButton.addEventListener("click", function () {
-    if (navMain.classList.contains("main-nav--closed")) {
-      navMain.classList.remove("main-nav--closed");
-      navMain.classList.add("main-nav--opened");
-      navButton.classList.remove("page-header__button--opened");
-      navButton.classList.add("page-header__button--closed");
-
-    } else {
-      navMain.classList.add("main-nav--closed");
-      navMain.classList.remove("main-nav--opened");
-      navButton.classList.remove("page-header__button--closed");
-      navButton.classList.add("page-header__button--opened");
-    }
-  });
-</script>
 </body>
 </html>
