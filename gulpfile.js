@@ -12,6 +12,20 @@ var imagemin = require("gulp-imagemin");
 var run= require("run-sequence");
 var del = require("del");
 
+gulp.task("serve", ["style"], function() {
+  server.init({
+    server: "source/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("source/less/**/*.less", ["style-dev"]).on("change", server.reload);
+  gulp.watch("source/less/**/*.less").on("change", server.reload);
+  gulp.watch("source/*.html").on("change", server.reload);
+});
+
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -50,7 +64,7 @@ gulp.task("images", function () {
 
 gulp.task("images-dev", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("build", function (done) {
@@ -58,7 +72,7 @@ gulp.task("build", function (done) {
 });
 
 gulp.task("build-dev", function (done) {
-  run("clean","style-dev", "images-dev", "copy", done);
+  run("style-dev", done);
 });
 
 gulp.task("copy", function () {
@@ -83,18 +97,4 @@ gulp.task("copy-html", function () {
 
 gulp.task("clean", function () {
   return del("build");
-});
-
-gulp.task("serve", ["style"], function() {
-  server.init({
-    server: "source/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html", ["copy-html"]);
-  gulp.watch("source/*.html").on("change", server.reload);
 });

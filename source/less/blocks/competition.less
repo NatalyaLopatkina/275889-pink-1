@@ -54,7 +54,17 @@
   }
 
   .competition {
-    background: none;
     min-height: 285px;
+    background: url("../img/bg-back-desktop@1x.jpg");
+    padding-top: 110px;
+    background-position: center;
+    background-position-y: 13px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+      background-position: center;
+      background-position-y: 13px;
+    }
   }
 }
