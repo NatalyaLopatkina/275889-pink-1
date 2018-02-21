@@ -5,8 +5,9 @@
   background-position-y: -70px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background: url("../img/bg-back-mobile@2x.jpg") no-repeat center;
     background-size: 700px auto;
+    background-position-y: -70px;
   }
 }
 
@@ -25,18 +26,22 @@
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/iphone-hand-mobile@2x.png");
     background-size: 258px auto;
+    min-height: 286px;
+    min-width: 258px;
+    position: absolute;
+    top: 106px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .app {
-    background: url("../img/bg-back-tablet@1x.jpg");
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
     position: relative;
     background-position: center;
     background-position-y: -111px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background: url("../img/bg-back-tablet@2x.jpg") no-repeat;
       background-size: 1200px auto;
       background-position: center;
       background-position-y: -111px;
@@ -66,13 +71,18 @@
     min-height: 545px;
     min-width: 700px;
     position: absolute;
-    top: 71px;
+    top: 74px;
     right: 0;
     background-position-x: 40px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/iphone-hand-tablet@2x.png");
       background-size: 700px auto;
+      min-width: 700px;
+      position: absolute;
+      top: 74px;
+      right: 0;
+      background-position-x: 40px;
     }
   }
 }
@@ -88,13 +98,15 @@
 
   .app {
     padding-top: 107px;
-    background: url("../img/bg-back-desktop@1x.jpg");
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat;
     background-position: center;
-    background-position-y: 13px;
+    background-position-y: 0;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background: url("../img/bg-back-desktop@2x.jpg") no-repeat;
       background-size: 2560px auto;
+      background-position: center;
+      background-position-y: 0;
     }
   }
 

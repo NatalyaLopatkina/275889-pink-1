@@ -1,13 +1,13 @@
 .photo {
-  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
-  background-position: center;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat center;
   display: flex;
   min-height: 168px;
   background-position-y: -72px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background: url("../img/bg-back-mobile@2x.jpg") no-repeat center;
     background-size: 700px auto;
+    background-position-y: -72px;
   }
 }
 
@@ -37,10 +37,12 @@
 
   .photo {
     min-height: 328px;
-    background: url("../img/bg-back-tablet@1x.jpg");
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
+    background-position: center;
+    background-position-y: -111px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background: url("../img/bg-back-tablet@2x.jpg") no-repeat;
       background-size: 1200px auto;
       background-position: center;
       background-position-y: -111px;

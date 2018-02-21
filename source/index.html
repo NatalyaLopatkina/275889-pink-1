@@ -5,7 +5,7 @@
     <title>Пинк. Главная страница</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/picturefill.min.js"></script>
+    <script src="js/picturefill.js"></script>
     <script src="js/script.button.js"></script>
   </head>
   <body>
@@ -98,15 +98,15 @@
           </li>
         </ul>
         <div class="offers__image-wrapper">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
-            <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+          <picture class="offers__image-picture">
+            <source media="(min-width: 960px)" class="offers__image-desktop3" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+            <source media="(min-width: 660px)" class="offers__image-tablet" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
             <img class="offers__image" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Всем привет!">
           </picture>
-          <picture>
+          <picture class="offers__image-picture">
             <img class="offers__image-desktop1" src="img/iphone-screen-2-desktop@1x.png" alt="Всем привет!" srcset="img/iphone-screen-2-desktop@2x.png 2x">
           </picture>
-          <picture>
+          <picture class="offers__image-picture">
             <img class="offers__image-desktop2" src="img/iphone-screen-3-desktop@2x.png" alt="Всем привет!" srcset="img/iphone-screen-3-desktop@2x.png 2x">
           </picture>
         </div>
@@ -225,9 +225,9 @@
     <div class="contacts">
       <ul class="contacts__list">
         <li class="contacts__item"><b class="contacts__title">Звоните:</b>
-          <p class="contacts__text"><a href="#" class="contacts__link"> +7 (812) 555-66-66</a></p></li>
+          <p class="contacts__text"><a href="tel:+7 (812) 555-66-66" class="contacts__link"> +7 (812) 555-66-66</a></p></li>
         <li class="contacts__item contacts__item--email"><b class="contacts__title">Пишите:</b>
-          <p class="contacts__text"><a href="#" class="contacts__link">mail@htmlacademy.ru</a></p></li>
+          <p class="contacts__text"><a href="mailto:mail@htmlacademy.ru" class="contacts__link">mail@htmlacademy.ru</a></p></li>
         <li class="contacts__item"><b class="contacts__title">Приезжайте в гости:</b>
           <p class="contacts__text">ул. Большая Конюшенная, 19/8</p></li>
       </ul>

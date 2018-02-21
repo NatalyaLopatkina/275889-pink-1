@@ -1106,7 +1106,7 @@ input[type="radio"]:checked + label::after {
   }
   .contacts__item {
     width: 275px;
-    padding-left: 0px;
+    padding-left: 0;
   }
   .contacts__text {
     margin-top: 5px;
@@ -1502,11 +1502,20 @@ input[type="radio"]:checked + label::after {
     margin-top: -2px;
     margin-left: 2px;
   }
+  .offers__image-wrapper {
+    width: 268px;
+  }
 }
 @media (min-width: 960px) {
   .offers__image-desktop1,
   .offers__image-desktop2 {
     display: block;
+  }
+  .offers__image-picture {
+    width: 292px;
+  }
+  .offers__image-wrapper {
+    min-width: 268px;
   }
   .offers__list {
     display: -webkit-box;
@@ -1650,7 +1659,7 @@ input[type="radio"]:checked + label::after {
   .page-header {
     position: absolute;
     width: 100%;
-    background: rgba(40, 54, 69, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
   }
   .page-header__wrapper {
